@@ -1092,6 +1092,7 @@ Unlike access to arrays, access to the elements of a `stackalloc`ed block is an 
 > }
 >
 > ```
+>
 > *end example*
 
 **End of conditionally normative text.**
