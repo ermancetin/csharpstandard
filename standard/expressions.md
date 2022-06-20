@@ -566,6 +566,7 @@ The *argument_value* can take one of the following forms:
   - Otherwise, *identifier* denotes a new local variable. It is a compile-time error if a variable by that name is currently in scope or if there is not an implicit conversion between the corresponding parameter’s type and *local_variable_type*.
 
 > *Example*:
+>
 > ```csharp
 > static void M(out int x) { … }
 > static void CallM1()
@@ -581,6 +582,7 @@ The *argument_value* can take one of the following forms:
 >     M(out var _);     // OK: typed discard
 > }
 > ```
+>
 > *end example*
 
 - If *local_variable_type* is absent 
@@ -589,6 +591,7 @@ The *argument_value* can take one of the following forms:
     - Otherwise, *identifier* is interpreted as an untyped discard.
 
 > *Example*:
+>
 > ```csharp
 > static void M(out int x) { … }
 > static void CallM2()
@@ -599,6 +602,7 @@ The *argument_value* can take one of the following forms:
 >     M(out _);     // OK: existing variable
 > }
 > ```
+>
 > *end example*
 
 It is also an error to reference an implicitly-typed out variable in the same argument list that immediately contains its declaration. 
