@@ -557,7 +557,7 @@ The *argument_value* can take one of the following forms:
 
 - An *expression*, indicating that the argument is passed as a value parameter ([§14.6.2.2](classes.md#14622-value-parameters)).
 - The keyword `ref` followed by a *variable_reference* ([§9.5](variables.md#95-variable-references)), indicating that the argument is passed as a reference parameter ([§14.6.2.3](classes.md#14623-reference-parameters)). A variable shall be definitely assigned ([§9.4](variables.md#94-definite-assignment)) before it can be passed as a reference parameter.
-- The keyword `out`, optionally followed by *local_variable_type* ([§12.6.2](statements.md#1262-local-variable-declarations)), followed by *identifier*, indicating that the argument is passed as an output parameter ([§14.6.2.4](classes.md#14624-output-parameters)). If *identifier* is not a discard (§discards-new-clause), the variable it designates is considered definitely assigned ([§9.4](variables.md#94-definite-assignment)) following a function member invocation in which the variable is passed as an output parameter. In this context, the variable designated by *identifier* is known as an ***out variable***.
+- The keyword `out`, optionally followed by *local_variable_type* ([§12.6.2](statements.md#1262-local-variable-declarations)), followed by *identifier*, indicating that the argument is passed as an output parameter ([§14.6.2.4](classes.md#14624-output-parameters)). If *identifier* is not a discard, the variable it designates is considered definitely assigned ([§9.4](variables.md#94-definite-assignment)) following a function member invocation in which the variable is passed as an output parameter. In this context, the variable designated by *identifier* is known as an ***out variable***.
 
 *identifier* denotes a new variable, an existing variable, or a discard depending on the context. Specifically,
 
@@ -5897,7 +5897,7 @@ assignment_operator
 
 The left operand of an assignment shall be an expression classified as a variable, a property access, an indexer access, or an event access.
 
-The `=` operator is called the ***simple assignment operator***. It assigns the value of the right operand to the variable, property, or indexer element given by the left operand. The left operand of the simple assignment operator shall not be an event access (except as described in [§14.8.2](classes.md#1482-field-like-events)). The simple assignment operator is described in [§11.18.2](expressions.md#11182-simple-assignment).
+The `=` operator is called the ***simple assignment operator***. It assigns the value of the right operand to the variable, property, or indexer element given by the left operand. The left operand of the simple assignment operator shall not be an event access (except as described in [§14.8.2](classes.md#1482-field-like-events)). The simple assignment operator is described in [§11.19.2](expressions.md#11192-simple-assignment).
 
 The assignment operators other than the `=` operator are called the ***compound assignment operators***. These operators perform the indicated operation on the two operands, and then assign the resulting value to the variable, property, or indexer element given by the left operand. The compound assignment operators are described in [§11.19.3](expressions.md#11193-compound-assignment).
 
