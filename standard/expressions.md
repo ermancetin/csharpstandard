@@ -4361,9 +4361,6 @@ The conditional operator is right-associative, meaning that operations are group
 
 The first operand of the `?:` operator shall be an expression that can be implicitly converted to `bool`, or an expression of a type that implements `operator true`. If neither of these requirements is satisfied, a compile-time error occurs.
 
-<<<<<<< HEAD
-The second and third operands, `x` and `y`, of the `?:` operator control the type of the conditional expression. If both `x` and `y` are *default_literal*s ([§11.7.19](expressions.md#11719-default-value-expressions)), a compile-time error occurs.
-=======
 If `ref` is present:
 Both *expression*s shall be variables having the same type, and that type is the type of the result.
 The result is a variable, which is writeable if both *expression* variables are writeable.
@@ -4377,7 +4374,6 @@ The run-time processing of a ref conditional expression of the form `b ? ref x :
 
 If `ref` is not present:
 The second and third operands, `x` and `y`, of the `?:` operator control the type of the conditional expression.
->>>>>>> 318fbd0 (Update expressions.md)
 
 - If `x` has type `X` and `y` has type `Y` then,
   - If `X` and `Y` are the same type, then this is the type of the conditional expression.
@@ -5870,11 +5866,7 @@ The `=` operator is called the ***simple assignment operator***. It assigns the
 
 The operator `= ref`  is called the ***ref assignment operator***. It makes the variable designated by the left operand, an alias for the variable designated by the right operand. The ref assignment operator is described in §ref-assignment-new-clause.
 
-<<<<<<< HEAD
 The assignment operators other than the `=` and `= ref` operators are called the ***compound assignment operators***. These operators perform the indicated operation on the two operands, and then assign the resulting value to the variable, property, or indexer element given by the left operand. The compound assignment operators are described in [§11.19.3](expressions.md#11193-compound-assignment).
-=======
-The assignment operators other than the `=` and `= ref` operators are called the ***compound assignment operators***. These operators perform the indicated operation on the two operands, and then assign the resulting value to the variable, property, or indexer element given by the left operand. The compound assignment operators are described in [§11.18.3](expressions.md#11183-compound-assignment).
->>>>>>> 8565628 (build fixes)
 
 The `+=` and `-=` operators with an event access expression as the left operand are called the ***event assignment operators***. No other assignment operator is valid with an event access as the left operand. The event assignment operators are described in [§11.19.4](expressions.md#11194-event-assignment).
 
